@@ -23,6 +23,9 @@ const Home = () => {
                 <BookmarkAddedOutlinedIcon className="icon" />
                 <FlipCameraAndroidOutlinedIcon className="icon" />
               </div>
+                <span>
+                <p>(2)</p>التقويم والامتحانات{" "}
+              </span>
             </div>
             <div className="c_right">
               <Calendar
