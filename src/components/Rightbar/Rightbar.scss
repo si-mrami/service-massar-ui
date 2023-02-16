@@ -1,5 +1,7 @@
+@import"../../media-query.scss";
+
 .rightbar {
-    width: 80px;
+    width: 300px;
     height: 100vh;
     background-color: #39c3bf;
     color: #fff;
@@ -13,8 +15,12 @@
     justify-content: space-between;
     transition: all 0.6s ease;
 
-    &:hover {
-        width: 300px;
+    // &:hover {
+    //     width: 300px;
+    // }
+
+    @include phone {
+        display: none;
     }
 
     .left {
