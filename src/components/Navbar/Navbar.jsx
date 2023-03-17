@@ -12,12 +12,16 @@ import { SchoolOutlined } from "@mui/icons-material";
 import EventNoteOutlinedIcon from "@mui/icons-material/EventNoteOutlined";
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
 import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
-// import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-// import CampaignOutlinedIcon from '@mui/icons-material/CampaignOutlined';
-// import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
-// import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import { useState } from "react";
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import CampaignOutlinedIcon from '@mui/icons-material/CampaignOutlined';
+import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 const Navbar = () => {
+
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="navbar">
       <div className="left">
@@ -29,9 +33,8 @@ const Navbar = () => {
         </div>
       </div>
       <div className="menu">
-        <MenuOutlinedIcon/>
-
-        <div className="menu-items">
+        <MenuOutlinedIcon className="icons" onClick={() => setOpen(!open)}/>
+        {open ? (<div className="menu-items">
         <ul>
         <li>
           <div className="item">
@@ -111,8 +114,32 @@ const Navbar = () => {
             <NoteAltOutlinedIcon className="icons" />
           </div>
         </li>
+        <li className="bottom-li">
+          <div className="item">
+          اشعارات 
+            <NotificationsNoneOutlinedIcon className="icons" />
+          </div>
+        </li>
+        <li>
+          <div className="item">
+          المستجدات 
+            <CampaignOutlinedIcon className="icons" />
+          </div>
+        </li>
+        <li>
+          <div className="item">
+          الاتصال 
+            <HeadsetMicOutlinedIcon className="icons" />
+          </div>
+        </li>
+        <li>
+          <div className="item">
+          الصفية أسماء 
+            <AccountCircleOutlinedIcon className="icons" />
+          </div>
+        </li>
       </ul>
-        </div>
+        </div>) : null}
       </div>
     </div>
   );

@@ -10,23 +10,30 @@
     .menu {
         display: none;
 
+        .icons {
+            margin-right: 2rem;
+        }
+
         @include phone {
             display: flex;
         }
 
         .menu-items {
             width: 100%;
-            height: 100vh;
+            height: 220vh;
             background-color: #39c3bf;
             color: #fff;
-            position: fixed;
-            top: 0;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            bottom: 0;
             z-index: 2;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             justify-content: space-between;
             transition: all 1.5s ease;
+            overflow: hidden;
 
 
             ul {
@@ -35,6 +42,10 @@
                 width: 250px;
                 margin-right: -1rem;
                 margin-top: 2rem;
+
+                .bottom-li {
+                    margin-top: 4rem;
+                }
                 
         
                 li {
